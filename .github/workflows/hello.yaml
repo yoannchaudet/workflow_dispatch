@@ -17,6 +17,9 @@ on:
       string:
         description: 'A string'
         type: string
+      number:
+        description: 'A number'
+        type: number
 
 jobs:
   hello:
