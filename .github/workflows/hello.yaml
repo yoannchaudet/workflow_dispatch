@@ -32,3 +32,4 @@ jobs:
           echo "choice: ${{ github.event.inputs.choice }}"
           echo "environment: ${{ github.event.inputs.environment }}"
           echo "string: ${{ github.event.inputs.string }}"
+          echo "number: ${{ github.event.inputs.number }}"
