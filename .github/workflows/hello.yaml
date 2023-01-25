@@ -1,0 +1,31 @@
+on:
+  workflow_dispatch:
+    inputs:
+      boolean:
+        description: 'A boolean'
+        type: boolean
+      choice:
+        description: 'A choice'
+        type: choice
+        options:
+          - 'one'
+          - 'two'
+          - 'three'
+      environment:
+        description: 'An environment'
+        type: environment
+      string:
+        description: 'A string'
+        type: string
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: |
+          echo "boolean: ${{ github.event.inputs.boolean }}"
+          echo "choice: ${{ github.event.inputs.choice }}"
+          echo "environment: ${{ github.event.inputs.environment }}"
+          echo "string: ${{ github.event.inputs.string }}"
